@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/master.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/projects.css">
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h3>Gary Dumond</h3>
+            <div>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga 
+                veniam voluptate iste neque, sequi obcaecati odio quidem 
+                veritatis, consectetur laudantium iusto, omnis dolor suscipit 
+                recusandae officiis dolorum sit temporibus maiores!
+            </p>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="slide-container">
+                <div>
+                    <iframe id="video-player"
+                        width="100%"
+                        src="https://www.youtube.com/embed/Rsg16mxXjFM" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <span class="prev" onclick="changeVideo(-1)">&#10094;</span>
+                <span class="next" onclick="changeVideo(1)">&#10095;</span>
+                <div id="video-position"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Technical Skills</h2>
+                <p>
+                    <span>Languages</span> [Python, JavaScript, Java, PHP, HTML, CSS, SQL]
+                    <span>Frameworks/Libraries</span> [Flask, Django, TensorFlow, Pandas, REST API, 
+                        JQuery, Node, Express Mongoose, React, Socket.io, SpringBoot, AXIOS, AJAX, 
+                        Bcrypt, Jinja, JSTL]
+                    <span>Databases</span> [MySQL, PostgreSQL, MongoDB, AWS]
+                    <span>Version Control Systems</span> [Git, GitHub]
+                </p>
+                <p>And Learning More Everyday!</p>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div>
+            <p>Gary Du Mond</p>
+            <p>Shippensburg, Pa</p>
+            <p>Roxbury, NY</p>
+            <p>Willing to relocate</p>
+        </div>
+        <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Indeed</a></li>
+            <li><a href="#">gdumond@gmail.com</a></li>
+        </ul>
+    </footer>
+
+
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

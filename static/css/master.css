@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-image: url('../images/mountains.jpg');
+    background-size: cover;
+}
+* {
+    color: cornsilk;
+    list-style: none;
+    text-decoration: none;
+}
+section{
+    background-color: rgba(111, 111, 111, .7);
+}
