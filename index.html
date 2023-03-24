@@ -5,24 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/master.css">
-    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/about.css">
     <link rel="stylesheet" href="static/css/projects.css">
+    <link rel="stylesheet" href="static/css/tech.css">
     <link rel="stylesheet" href="static/css/navbar.css">
     <link rel="stylesheet" href="static/css/footer.css">
     <title>Document</title>
 </head>
 <body>
 
+    <div class="parallax">
+        <div class="parallax-child">
+            <h1>Gary Du Mond</h1>
+            <h3>FullStack Development</h3>
+        </div>
+    </div>
+    
+    <div id="about"></div>
     <header>
-        <nav>
+        <div id="nav-place-holder"></div>
+        <nav id="gd-nav">
             <h3>Gary Dumond</h3>
             <div>
                 <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                    <li><a href="#">Link 5</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#technologies">Technical Skills</a></li>
                 </ul>
             </div>
         </nav>
@@ -32,42 +40,71 @@
 
     <main>
         <section>
-            <h2>About Me</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga 
-                veniam voluptate iste neque, sequi obcaecati odio quidem 
-                veritatis, consectetur laudantium iusto, omnis dolor suscipit 
-                recusandae officiis dolorum sit temporibus maiores!
-            </p>
-        </section>
-
-        <section>
-            <h2>Projects</h2>
-
-            <div class="slide-container">
-                <div>
-                    <iframe id="video-player"
-                        width="100%"
-                        src="https://www.youtube.com/embed/Rsg16mxXjFM" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <span class="prev" onclick="changeVideo(-1)">&#10094;</span>
-                <span class="next" onclick="changeVideo(1)">&#10095;</span>
-                <div id="video-position"></div>
+            <div id="about-me-banner" class="banner">
+                <article>
+                    <h2>About Me</h2>
+                </article>
+            </div>
+    
+            <div class="about-me-content">
+                <div id="gary"></div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga 
+                    veniam voluptate iste neque, sequi obcaecati odio quidem 
+                    veritatis, consectetur laudantium iusto, omnis dolor suscipit 
+                    recusandae officiis dolorum sit temporibus maiores!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga 
+                    veniam voluptate iste neque, sequi obcaecati odio quidem 
+                    veritatis, consectetur laudantium iusto, omnis dolor suscipit 
+                    recusandae officiis dolorum sit temporibus maiores!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga 
+                    <div id="projects"></div>
+                    veniam voluptate iste neque, sequi obcaecati odio quidem 
+                    veritatis, consectetur laudantium iusto, omnis dolor suscipit 
+                    recusandae officiis dolorum sit temporibus maiores!
+                </p>
             </div>
         </section>
 
         <section>
-            <div>
-                <h2>Technical Skills</h2>
+            <div id="projects-banner" class="banner">
+                <article>
+                    <h2>Projects</h2>
+                </article>
+            </div>
+            <br>
+            <div class="slide-container content">
+                <iframe id="video-player"
+                    width="100%"
+                    src="https://www.youtube.com/embed/Rsg16mxXjFM" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+                <div id="technologies"></div>
+            </div>
+            <div class="flex-wrapper flex-align-center flex-justify-center flex-gap-5">
+                <span class="prev" onclick="changeVideo(-1)">&#10094;</span>
+                <div id="video-position"></div>
+                    <span class="next" onclick="changeVideo(1)">&#10095;</span>
+                </div>
+            </div>
+            <br>
+        </section>
+
+        <section>
+            <div id="technologies-banner" class="banner">
+                <article>
+                    <h2>Technical Skills</h2>
+                </article>
+            </div>
+    
+            <div class="about-me-content">
                 <p>
                     <span>Languages</span> [Python, JavaScript, Java, PHP, HTML, CSS, SQL]
                     <span>Frameworks/Libraries</span> [Flask, Django, TensorFlow, Pandas, REST API, 
-                        JQuery, Node, Express Mongoose, React, Socket.io, SpringBoot, AXIOS, AJAX, 
+                        JQuery, Node, Express, Mongoose, React, Socket.io, SpringBoot, AXIOS, AJAX, 
                         Bcrypt, Jinja, JSTL]
                     <span>Databases</span> [MySQL, PostgreSQL, MongoDB, AWS]
                     <span>Version Control Systems</span> [Git, GitHub]
@@ -75,7 +112,17 @@
                 <p>And Learning More Everyday!</p>
             </div>
         </section>
+
     </main>
+
+
+
+    <div class="parallax">
+        <div class="parallax-child">
+            <h2>Thank you</h2>
+            <h4>For Your Time</h4>
+        </div>
+    </div>
 
 
 

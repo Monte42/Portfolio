@@ -1,5 +1,15 @@
 console.log("Hello World");
 
+const navPlaceHolder = document.getElementById('nav-place-holder')
+const navBar = document.getElementById('gd-nav')
+
+document.onscroll = () => {
+    // console.log(nav.getBoundingClientRect().top);
+    navPlaceHolder.getBoundingClientRect().top<=0 ? navBar.classList.add('stick-top') : navBar.classList.remove('stick-top')
+}
+
+
+
 let slideIndex = 0
 
 const videoPlayer = document.getElementById("video-player")
