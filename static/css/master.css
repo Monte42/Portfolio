@@ -1,3 +1,4 @@
+/* All Sections */
 * {
     margin: 0;
     padding: 0;
@@ -5,47 +6,33 @@
     list-style: none;
     text-decoration: none;
 }
-
-body{
-    background-color: #313131;
+body{background-color: #313131;}
+/* Flex Options */
+.flex-wrapper{display: flex;}
+.flex-align-center{align-items: center;}
+.flex-justify-center{justify-content: center;}
+.flex-justify-around{justify-content: space-around;}
+.flex-gap-5{gap: 5px;}
+.flex-gap-10{gap: 10px;}
+.flex-wrap{flex-wrap: wrap;}
+.content {
+    min-height: 20vw;
+    width: 80vw;
+    padding: 5vw 0;
+    margin: 0 auto;
+    height: fit-content;
+    font-size: 2.2vw;
 }
-
-.flex-wrapper{
-    display: flex;
-}
-.flex-align-center{
-    align-items: center;
-}
-.flex-justify-center{
-    justify-content: center;
-}
-.flex-justify-around{
-    justify-content: space-around;
-}
-.flex-gap-5{
-    gap: 5px;
-}
-.flex-wrap{
-    flex-wrap: wrap;
-}
-
-
-.content{
-    padding: 20px 0;
-}
-
 .parallax{
-    background-image: url('/static/images/mountains.jpg');
-    height: 60Vh;
     background-attachment: fixed;
-    background-position: center;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
-.parallax-child{
+.main-banner{
+    background-image: url('/static/images/mountains.jpg');
+    background-position: 50% 20%;
+    height: 60Vh;
+}
+.main-banner-child{
     font-size: 3.5vw;
     text-align: center;
     padding: 5px 35px;
@@ -53,43 +40,54 @@ body{
     background-color: rgba(99, 99, 99, .5);
     border-radius: 12px;
 }
-
+.secondary-banner {padding: 8vh 0;}
 article{
     margin: 0 auto;
     padding: 15px 30px;
     width: fit-content;
     font-size: 2vw;
-    text-align: center;
     background-color: rgba(75, 75, 75, .7);
     border-radius: 15px;
 }
 
-nav{z-index: 1;}
 
-.banner {
-    background-attachment: fixed;
-    height: fit-content;
-    background-size: cover;
-    padding: 8vh 0;
+
+
+
+/* Navbar */
+#gd-nav{
+    z-index: 1;
+    width: 100%;
+}
+#base-nav, #base-nav ul{background-color: brown;}
+#base-nav{padding: 1.5vw 0;}
+#nav-icon{display: none;}
+#responsive-nav {background-color: #313131;}
+#responsive-nav ul li{
+    padding: 5px 20px;
+    text-align: center;
+}
+#responsive-nav ul li:active {background-color: #918e8e;}
+.hidden{display: none;}
+.stick-top {
+    position:fixed;
+    top: 0;
 }
 
+
+
+
+
+/* About Me */
 #about-me-banner{
     background-image: url('/static/images/castle.jpg');
+    background-position: 0 15%;
 }
-
-#projects-banner {
-    background-image: url('/static/images/matrix_code.jpg');
-}
-
-#technologies-banner{
-    background-image: url('/static/images/neon_chip.jpg');
-}
-
 #gary{
     margin: 15px;
-    height: 15vw;
+    height: 20vw;
     min-height: 100px;
-    width: 15vw;
+    width: 20vw;
     min-width: 100px;
     border-radius: 50%;
     shape-outside: circle();
@@ -99,32 +97,29 @@ nav{z-index: 1;}
     background-position: 0px -20px;
     float: left;
 }
+#gd-description p:nth-of-type(n+3){text-indent: 5vw;}
 
-.about-me-content {
-    min-height: 20vw;
-    width: 80vw;
-    padding: 5vw 0;
-    margin: 0 auto;
-    height: fit-content;
-    font-size: 2.2vw;
+
+
+
+
+/* Projects */
+#projects-banner {
+    background-image: url('/static/images/matrix_code.jpg');
 }
-
 .slide-container {
     width: 95%;
     margin: 0 auto;
 }
-
 iframe{
     height: 32vw;
     border-radius: 15px;
     box-shadow: 3px 3px 5px #121;
 }
-
 #video-position {
     display: flex;
     gap: 1%;
 }
-
 .dot {
     height: 1.5vw;
     width: 1.5vw;
@@ -134,22 +129,28 @@ iframe{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-
-.active {
-    background-color: #918e8e;
-}
-
+.active {background-color: #918e8e;}
 .prev, .next{
     cursor: pointer;
     padding: 2px 4px;
     transition: 0.6s ease;
     border-radius: 5px;
 }
+.prev:hover, .next:hover {background-color: rgba(0,0,0,0.8);}
 
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+
+
+
+
+/* Technical Skill */
+#technologies-banner{background-image: url('/static/images/neon_chip.jpg');}
+strong{text-decoration: underline;}
+#tech-skills p{margin: 10px 0;}
+#tech-skills p:last-of-type{
+    text-align: center;
+    font-weight: 900;
+    margin-top: 20px;
 }
-
 #tech-box-outer{
     width: 60vw;
     overflow: hidden;
@@ -159,16 +160,41 @@ iframe{
     background-color: rgba(111, 111, 111, .4);
 }
 #tech-box-inner{
-    background: url('/static/images/technologies/Skill_Banner2.png') repeat 0 0;
+    background: url('/static/images/Skill_Banner2.png') repeat 0 0;
     height: 20vw;
     width: 110vw;
     background-size: cover;
-    animation: animate 220s linear infinite;
+    animation: animate 360s linear infinite;
 }
-
 @keyframes animate {
-    100% {
-        background-position: -20000px;
-    }
+    100% {background-position: -20000px;}
 }
 
+
+
+/* Footer */
+footer{
+    padding: 10px 0;
+}
+
+
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    .content{font-size: 3vw;}
+    #base-nav{
+        padding: 2vw 2vw;
+        justify-content: space-between;
+    }
+    #base-nav ul{display: none;}
+    #nav-icon{display: block;}
+    #gd-description p:nth-of-type(n+2){
+        text-indent: 5vw;
+    }
+    #tech-box-outer{width: 80vw;}
+    #tech-box-inner{animation: animate 860s linear infinite;}
+}
+@media screen and (max-width: 450px) {
+    .content{font-size: 4vw;}
+}
