@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="static/css/tech.css">
     <link rel="stylesheet" href="static/css/navbar.css">
     <link rel="stylesheet" href="static/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
 
-    <div class="parallax">
-        <div class="parallax-child">
+    <div class="parallax main-banner flex-wrapper flex-justify-center flex-align-center">
+        <div class="main-banner-child">
             <h1>Gary Du Mond</h1>
             <h3>FullStack Development</h3>
         </div>
@@ -24,56 +25,78 @@
     <div id="about"></div>
     <header>
         <div id="nav-place-holder"></div>
-        <nav id="gd-nav">
-            <h3>Gary Dumond</h3>
-            <div>
-                <ul>
+        <div id="gd-nav">
+            <nav id="base-nav" class="flex-wrapper flex-justify-around">
+                <h3><a href="#">Gary Du Mond</a></h3>
+                <ul class="flex-wrapper flex-justify-around flex-align-center flex-gap-10">
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#technologies">Technical Skills</a></li>
                 </ul>
-            </div>
-        </nav>
+                <a href="javascript:void(0);" id="nav-icon" onclick="toggleNavLinks()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+            <nav id="responsive-nav" class="hidden">
+                <ul>
+                    <li><a href="#about" onclick="toggleNavLinks()">About Me</a></li>
+                    <li><a href="#projects" onclick="toggleNavLinks()">Projects</a></li>
+                    <li><a href="#technologies" onclick="toggleNavLinks()">Technical Skills</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
 
 
     <main>
         <section>
-            <div id="about-me-banner" class="banner">
+            <div id="about-me-banner" class="parallax secondary-banner">
                 <article>
                     <h2>About Me</h2>
                 </article>
             </div>
     
-            <div class="about-me-content">
+            <div class="content">
                 <div id="gary"></div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga 
-                    veniam voluptate iste neque, sequi obcaecati odio quidem 
-                    veritatis, consectetur laudantium iusto, omnis dolor suscipit 
-                    recusandae officiis dolorum sit temporibus maiores!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga 
-                    veniam voluptate iste neque, sequi obcaecati odio quidem 
-                    veritatis, consectetur laudantium iusto, omnis dolor suscipit 
-                    recusandae officiis dolorum sit temporibus maiores!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga 
-                    <div id="projects"></div>
-                    veniam voluptate iste neque, sequi obcaecati odio quidem 
-                    veritatis, consectetur laudantium iusto, omnis dolor suscipit 
-                    recusandae officiis dolorum sit temporibus maiores!
-                </p>
+                <div id="gd-description">
+                    <p>
+                        Greatings, I am an aspiring software/web deveolper who is
+                        proficient in multiple stacks.  I first starting learning 
+                        development early 2019 with Python using the built in package
+                        called "Turtle".  Recently, I have completed a coding 
+                        bootcamp, among the top of my class in ever section with the 
+                        highest of honors.  Completing every section with a perfect 
+                        attendance, as well as a perfect score, I demonstrated my 
+                        level of commitment and ability to quickly learn new skills.
+                    </p>
+                    <p>
+                        Having spent many years working in the blue color field, I come 
+                        with a unique work history, possessing many skills that a college
+                        grad would not have.  This gives me an in depth understanding of 
+                        the potential customers we as developers intend to help.
+                    </p>
+                    <p>
+                        As a motorcycle enthusiast, I greatly enjoy exploring new areas
+                        and seeing new sites.  I am also an avid snowboarder, who was a 
+                        ski patroller for 5 years.  I thrive on taking on new challenges,
+                        and learning new skills and ideas.  With a strong passion for 
+                        <span id="projects"></span>
+                        coding I am seeking a career change, and I believe that I would
+                        make a great candidate for any of you programmer needs!
+                    </p>
+                </div>
             </div>
         </section>
 
         <section>
-            <div id="projects-banner" class="banner">
+            <div id="projects-banner" class="parallax secondary-banner">
                 <article>
                     <h2>Projects</h2>
                 </article>
             </div>
             <br>
-            <div class="slide-container content">
+            <div class="slide-container">
                 <iframe id="video-player"
                     width="100%"
                     src="https://www.youtube.com/embed/Rsg16mxXjFM" 
@@ -94,46 +117,54 @@
         </section>
 
         <section>
-            <div id="technologies-banner" class="banner">
+            <div id="technologies-banner" class="parallax secondary-banner">
                 <article>
                     <h2>Technical Skills</h2>
                 </article>
             </div>
     
-            <div class="about-me-content">
+            <div id="tech-skills" class="content">
                 <p>
-                    <span>Languages</span> [Python, JavaScript, Java, PHP, HTML, CSS, SQL]
-                    <span>Frameworks/Libraries</span> [Flask, Django, TensorFlow, Pandas, REST API, 
-                        JQuery, Node, Express, Mongoose, React, Socket.io, SpringBoot, AXIOS, AJAX, 
-                        Bcrypt, Jinja, JSTL]
-                    <span>Databases</span> [MySQL, PostgreSQL, MongoDB, AWS]
-                    <span>Version Control Systems</span> [Git, GitHub]
+                    <strong>Languages:</strong> [Python, JavaScript, Java, PHP, HTML, CSS, SQL]
+                </p>
+                <p>
+                    <strong>Frameworks/Libraries:</strong> [Flask, Django, TensorFlow, Pandas, REST API, 
+                    JQuery, Node, Express, Mongoose, React, Socket.io, SpringBoot, AXIOS, AJAX, 
+                    Bcrypt, Jinja, JSTL]
+                </p>
+                <p>
+                    <strong>Databases:</strong> [MySQL, PostgreSQL, MongoDB, AWS]
+                </p>
+                <p>
+                    <strong>Version Control Systems:</strong> [Git, GitHub]
                 </p>
                 <p>And Learning More Everyday!</p>
+                <div id="tech-box-outer">
+                    <div id="tech-box-inner"></div>
+                </div>
             </div>
         </section>
-
     </main>
 
 
 
-    <div class="parallax">
-        <div class="parallax-child">
+    <div class="parallax main-banner flex-wrapper flex-justify-center flex-align-center">
+        <div class="main-banner-child">
             <h2>Thank you</h2>
-            <h4>For Your Time</h4>
+            <h4>Hope to hear from you soon!</h4>
         </div>
     </div>
 
 
 
-    <footer>
+    <footer class="flex-wrapper flex-justify-around">
         <div>
             <p>Gary Du Mond</p>
             <p>Shippensburg, Pa</p>
             <p>Roxbury, NY</p>
             <p>Willing to relocate</p>
         </div>
-        <ul>
+        <ul class="flex-wrapper flex-align-center flex-gap-10">
             <li><a href="#">GitHub</a></li>
             <li><a href="#">LinkedIn</a></li>
             <li><a href="#">Indeed</a></li>
